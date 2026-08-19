@@ -3,7 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rental Property Cash Flow Calculator</title>
+  
+  <!-- SEO META TAGS -->
+  <title>Rental Property Cash Flow Calculator | Real Estate Investment Tool</title>
+  <meta name="description" content="Calculate rental property monthly cash flow, operating expense ratios, vacancy reserves, and net operating income (NOI) instantly. Free deal analyzer for real estate investors and landlords.">
+  <meta name="keywords" content="rental property cash flow calculator, real estate investment calculator, rental property deal analyzer, NOI calculator rental property, landlord cash flow tool, cap rate cash flow calculator, 50 percent rule real estate">
+  <meta name="author" content="Real Estate Investment Tools">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#16a34a">
+  <link rel="canonical" href="https://example.com/rental-property-cash-flow-calculator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/rental-property-cash-flow-calculator">
+  <meta property="og:title" content="Rental Property Cash Flow Calculator | Real Estate Investment Tool">
+  <meta property="og:description" content="Analyze potential investment properties and calculate net monthly cash flow, vacancy reserves, and operating expense ratios instantly.">
+  <meta property="og:image" content="https://example.com/assets/rental-calculator-og.jpg">
+  <meta property="og:site_name" content="Real Estate Investment Tools">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://example.com/rental-property-cash-flow-calculator">
+  <meta name="twitter:title" content="Rental Property Cash Flow Calculator">
+  <meta name="twitter:description" content="Free cash flow calculator for rental property investors. Forecast net income, property taxes, insurance, and maintenance buffers.">
+  <meta name="twitter:image" content="https://example.com/assets/rental-calculator-og.jpg">
+
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://example.com/rental-property-cash-flow-calculator#webapp",
+        "url": "https://example.com/rental-property-cash-flow-calculator",
+        "name": "Rental Property Cash Flow Calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "description": "Calculate rental property net monthly cash flow, operating expense ratios, vacancy reserve reserves, and annual net income for real estate investments.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://example.com/rental-property-cash-flow-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a good cash flow for a rental property?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard baseline benchmark for long-term residential rental properties is $200 to $400 in net positive cash flow per door per month after setting aside reserves for taxes, insurance, vacancy, and capital expenditures (CapEx)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 50% rule in real estate investing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 50% rule estimates that approximately 50% of a rental property's gross rental income will be spent on operating expenses (excluding mortgage principal and interest payments)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much should landlords budget for maintenance and vacancy reserves?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Real estate investors typically reserve 5% to 10% of gross monthly rent for ongoing maintenance and repair reserves, plus an additional 5% to 8% for vacancy buffers."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --primary: #16a34a;
@@ -23,8 +100,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-main);
-      line-height: 1.5;
-      padding: 20px;
+      line-height: 1.6;
+      padding: 20px 12px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,15 +118,15 @@
       overflow: hidden;
     }
 
-    .header {
+    header {
       background: linear-gradient(135deg, #16a34a 0%, #0d9488 100%);
       color: #ffffff;
-      padding: 32px 24px;
+      padding: 36px 24px;
       text-align: center;
     }
 
-    .header h1 { font-size: 1.85rem; font-weight: 700; margin-bottom: 8px; }
-    .header p { color: #dcfce7; font-size: 0.95rem; max-width: 600px; margin: 0 auto; }
+    header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+    header p { color: #dcfce7; font-size: 0.95rem; max-width: 620px; margin: 0 auto; }
 
     .calculator-grid { display: grid; grid-template-columns: 1fr 1fr; }
     @media (max-width: 768px) { .calculator-grid { grid-template-columns: 1fr; } }
@@ -106,20 +183,44 @@
     }
     .stripe-link-btn:hover { background: #15803d; }
 
-    .footer { text-align: center; padding: 16px; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-color); }
+    /* INDEXABLE SEO CONTENT SECTION */
+    .seo-content {
+      padding: 32px 24px;
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .seo-content h2 { font-size: 1.3rem; margin-bottom: 12px; color: var(--text-main); }
+    .seo-content h3 { font-size: 1.05rem; margin: 18px 0 8px 0; color: var(--text-main); }
+    .seo-content p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
+
+    .seo-content table {
+      width: 100%; border-collapse: collapse; margin: 16px 0 24px 0; font-size: 0.875rem;
+    }
+    .seo-content th, .seo-content td {
+      border: 1px solid var(--border-color); padding: 10px; text-align: left;
+    }
+    .seo-content th { background-color: var(--bg-color); font-weight: 600; }
+
+    .faq-section { margin-top: 24px; }
+    .faq-item { margin-bottom: 16px; }
+    .faq-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
+    .faq-item p { font-size: 0.875rem; margin-bottom: 0; }
+
+    footer { text-align: center; padding: 16px; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-color); }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="header">
+    <header>
       <h1>Rental Property Cash Flow Calculator</h1>
-      <p>Analyze potential investment properties and calculate net monthly cash flow instantly.</p>
-    </div>
+      <p>Analyze potential investment properties, calculate net operating costs, and estimate monthly cash flow instantly.</p>
+    </header>
 
-    <div class="calculator-grid">
-      <div class="inputs-section">
-        <div class="section-title">1. Rental Income</div>
+    <main class="calculator-grid">
+      <section class="inputs-section" aria-label="Calculator Inputs">
+        <h2 class="section-title">1. Rental Income</h2>
         <div class="form-group">
           <label for="monthlyRent">Monthly Rent Revenue</label>
           <div class="input-wrapper">
@@ -128,7 +229,7 @@
           </div>
         </div>
 
-        <div class="section-title" style="margin-top: 24px;">2. Monthly Expenses</div>
+        <h2 class="section-title" style="margin-top: 24px;">2. Monthly Expenses</h2>
         <div class="form-group">
           <label for="mortgage">Mortgage Payment (P&I)</label>
           <div class="input-wrapper">
@@ -168,9 +269,9 @@
             <span class="input-suffix">%</span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="results-section">
+      <section class="results-section" aria-label="Calculation Results">
         <div>
           <div class="primary-card">
             <div class="label">Net Monthly Cash Flow</div>
@@ -197,20 +298,82 @@
           </div>
         </div>
 
-        <div class="cta-container">
+        <aside class="cta-container">
           <div class="cta-title">Protect Your Rental Investment</div>
           <div class="cta-desc">Download the complete Landlord Tenant Screening & Lease Agreement Kit with state-compliant lease templates and rental application forms.</div>
 
           <a href="https://buy.stripe.com/bJe14n68K9rF8Vs83V2Ry01" class="stripe-link-btn" target="_blank" rel="noopener">
             Get The Lease Kit ($2.99)
           </a>
-        </div>
-      </div>
-    </div>
+        </aside>
+      </section>
+    </main>
 
-    <div class="footer">
+    <!-- INDEXABLE SEO CONTENT SECTION FOR TARGETED KEYWORDS -->
+    <article class="seo-content">
+      <h2>Rental Property Investment Metrics & Benchmarks</h2>
+      <p>Accurate cash flow modeling prevents real estate investors from underestimating property holding costs. Overlooking unallocated capital expenditures (CapEx) or localized vacancy fluctuations can convert an apparently profitable rental into a cash-negative asset.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Metric Name</th>
+            <th>Target Investor Benchmark</th>
+            <th>Primary Calculation Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Net Monthly Cash Flow</td>
+            <td>$200 - $400+ per door</td>
+            <td>Net revenue after mortgage, taxes, insurance, & reserves</td>
+          </tr>
+          <tr>
+            <td>Operating Expense Ratio (OER)</td>
+            <td>35% - 45% of rental income</td>
+            <td>Non-mortgage property maintenance & operating overhead</td>
+          </tr>
+          <tr>
+            <td>Maintenance & CapEx Reserve</td>
+            <td>8% - 12% of gross rent</td>
+            <td>Roofing, HVAC replacement, plumbing, and wear-and-tear repairs</td>
+          </tr>
+          <tr>
+            <td>Vacancy Reserve Rate</td>
+            <td>5% - 8% (approx. 2-4 weeks/yr)</td>
+            <td>Holding expenses during tenant turnover periods</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>How to Calculate Rental Cash Flow Formula</h3>
+      <p>To calculate true rental property net cash flow, subtract operating expenses and debt service from gross revenue:</p>
+      <p><code>Monthly Operating Expenses = (Property Taxes ÷ 12) + (Insurance ÷ 12) + Maintenance Reserve + Vacancy Reserve</code></p>
+      <p><code>Net Monthly Cash Flow = Monthly Rent - (Mortgage Payment + Monthly Operating Expenses)</code></p>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <h4>What is a good cash flow for a rental property?</h4>
+          <p>A standard target for residential single-family homes or multi-family units is $200 to $400 in net monthly cash flow per door after accounting for all debt obligations, taxes, insurance, and maintenance reserves.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What is the 50% rule in real estate investing?</h4>
+          <p>The 50% rule is a quick screening guideline estimating that approximately 50% of gross rental income will go toward operating expenses (excluding mortgage principal and interest).</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What is the difference between Cap Rate and Cash-on-Cash Return?</h4>
+          <p>Capitalization Rate (Cap Rate) evaluates a property's unleveraged yield based on Net Operating Income (NOI) divided by purchase price. Cash-on-Cash Return calculates leveraged yield based on annual net cash flow divided by total out-of-pocket cash invested (down payment, closing costs, and rehab).</p>
+        </div>
+      </section>
+    </article>
+
+    <footer>
       Powered by Rental Cash Flow Calculator &bull; Free Investor Tool Wheelz
-    </div>
+    </footer>
   </div>
 
   <script>
